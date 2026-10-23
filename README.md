@@ -6,6 +6,20 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
+## v1.0.1 伴奏音量測試版
+
+供使用者試唱驗證「自己聽」與「聽眾輸出」能否分開調整。這是 **Pre-release 測試版**，請手動下載；程式的一般更新檢查不會提供此測試版。
+
+- [下載 v1.0.1 Windows x64 測試版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.1/KaraokeMixer-Windows-x64-v1.0.1.zip)
+- [測試版 SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.1/KaraokeMixer-Windows-x64-v1.0.1.zip.sha256)
+- [測試方式與回報重點](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.1)
+
+「伴奏輸出（聽眾）」控制 Discord 及混音錄音；「伴奏監聽（自己）」只控制自己耳機。兩組支援 0.1% 等小數、桌面數值輸入與手機遙控。輸出伴奏靜音會保留自己的伴奏；自己要靜音請將個人監聽設 0%。
+
+內建 YouTube 請先選耳機，保留預設勾選的「獨立伴奏監聽／升降 Key 相容模式」，再開始混音。部分特殊、跨來源或受保護播放器不相容；外部瀏覽器／內建直出模式的個人伴奏滑桿會停用。
+
+請解壓縮到新資料夾，保留原有設定與錄音。已完成本機音訊、介面及瀏覽器檢查；原回報的 Discord 端音量仍待實際試唱。尚未正式簽章，SmartScreen 警告仍可能出現。回報時請說明兩組伴奏百分比、是否啟用相容模式、自己及聽眾各聽到的結果，並透過程式內問題回報或 Discord id:quebecliec 聯絡作者。
+
 ## 下載第一代 v1.0.0
 
 - [Windows x64 可攜版（含青綠麥克風圖示）](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.0/KaraokeMixer-Windows-x64-v1.0.0.zip)
@@ -66,3 +80,4 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 VB-CABLE 為 VB-Audio 提供的 Donationware，歡迎捐款或購買授權：[官方來源](https://vb-audio.com/Cable/)、[使用及散布條款](https://vb-audio.com/Services/licensing.htm)。隨附 `VBCABLE_Driver_Pack45.zip` 是未修改的官方標準版；專業組織部署請依其條款處理授權。
 
 NAudio、.NET、WPF、WebView2、QRCoder、ASP.NET Core 及發行工具的授權／通知隨套件附上。Discord 不包含在下載包內。
+

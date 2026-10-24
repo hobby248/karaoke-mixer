@@ -6,11 +6,15 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-## 下載 v1.0.5 正式最新版
+## 下載 v1.0.6 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.5/KaraokeMixer-Windows-x64-v1.0.5.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.5/KaraokeMixer-Windows-x64-v1.0.5.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.6/KaraokeMixer-Windows-x64-v1.0.6.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.6/KaraokeMixer-Windows-x64-v1.0.6.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)
+
+v1.0.6 修正更新中途失敗後的復原路徑判斷，更新與還原略過內容相同的執行階段檔案，復原採完整暫存寫入後原子替換，並保留各階段錯誤記錄。完整安裝複本已通過 1.0.5 → 1.0.6 更新與啟動驗證，包含被唯讀分享鎖定的相同加密 DLL，以及設定／錄音保留檢查。
+
+**若已經更新失敗，請先保留原交易備份，手動下載並完整解壓到新資料夾，或聯絡作者修復。** 舊版更新器更新本版時仍可能使用舊邏輯，不保證再次按更新能修好已中斷的安裝。不要刪除設定、錄音或 `%LOCALAPPDATA%\KaraokeMixer\Updates` 內的原始交易。
 
 v1.0.5 包含先前測試版的伴奏音量改善，並修正內建瀏覽器開始混音失敗、反覆短斷音，以及換歌／跳轉後音量失效。作者已確認 v1.0.5 實際使用正常。
 
@@ -20,7 +24,7 @@ v1.0.5 包含先前測試版的伴奏音量改善，並修正內建瀏覽器開�
 
 既有使用者可在程式內檢查更新；開啟更新檢查者可收到這份正式版。更新檢查仍預設關閉，錄音完成並停止混音後再安裝更新。
 
-歷史版本：[v1.0.1 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.1)、[v1.0.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.0)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
+歷史版本：[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[v1.0.1 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.1)、[v1.0.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.0)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
 
 完整解壓縮 ZIP，再執行 `KaraokeMixer.App.exe`。保留 DLL、licenses 及 prerequisites 資料夾。v0.2.0 使用者請解壓縮到新的資料夾使用；舊版沒有內建更新器，不會自動升級。不要刪除個人設定與錄音。
 
@@ -66,6 +70,8 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 程式不會自動開啟麥克風、安裝驅動、重新啟動電腦或修改 Windows／Discord 預設音訊設定。不提供 AI 去人聲、YouTube 下載、純音訊自動產生歌詞、歌單或 MP3 錄音匯出。網站廣告、登入、驗證及內容限制由網站處理。
 
 ## 驗證範圍
+
+v1.0.6 最終混淆包通過核心 34 項、WPF 21 項及三語／淺深色六組，並完成完整安裝複本的鎖定 DLL 更新與啟動驗證。本輪未改音訊／網站／手機流程，也未重新驗證 Discord 試唱。
 
 v1.0.5 最終混淆包通過核心 32 項、緩衝 9 項、瀏覽器模擬 17 項、實際 WebView2 48 項、WPF 21 項，以及三語與淺深色六組檢查。包含安全限制頁面下的靜音自製媒體混音、跳轉音量、停止還原、模組代次驗證與錯誤代碼。真正 YouTube 測試驗證公開頁面下的 48 kHz 音訊模組載入，未播放或下載使用者歌曲。
 

@@ -6,25 +6,21 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-## v1.0.1 伴奏音量測試版
+## 下載 v1.0.5 正式最新版
 
-供使用者試唱驗證「自己聽」與「聽眾輸出」能否分開調整。這是 **Pre-release 測試版**，請手動下載；程式的一般更新檢查不會提供此測試版。
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.5/KaraokeMixer-Windows-x64-v1.0.5.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.5/KaraokeMixer-Windows-x64-v1.0.5.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)
 
-- [下載 v1.0.1 Windows x64 測試版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.1/KaraokeMixer-Windows-x64-v1.0.1.zip)
-- [測試版 SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.1/KaraokeMixer-Windows-x64-v1.0.1.zip.sha256)
-- [測試方式與回報重點](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.1)
+v1.0.5 包含先前測試版的伴奏音量改善，並修正內建瀏覽器開始混音失敗、反覆短斷音，以及換歌／跳轉後音量失效。作者已確認 v1.0.5 實際使用正常。
 
-「伴奏輸出（聽眾）」控制 Discord 及混音錄音；「伴奏監聽（自己）」只控制自己耳機。兩組支援 0.1% 等小數、桌面數值輸入與手機遙控。輸出伴奏靜音會保留自己的伴奏；自己要靜音請將個人監聽設 0%。
+「伴奏輸出（聽眾）」控制 Discord 及混音錄音；「伴奏監聽（自己）」只控制自己耳機。桌面及同區網手機皆使用 dB 刻度：0 dB 為原音量，負值更小聲，最低格精確靜音。兩組音量各自獨立，輸出靜音不會一併關閉自己的伴奏監聽。
 
-內建 YouTube 請先選耳機，保留預設勾選的「獨立伴奏監聽／升降 Key 相容模式」，再開始混音。部分特殊、跨來源或受保護播放器不相容；外部瀏覽器／內建直出模式的個人伴奏滑桿會停用。
+內建 YouTube 請先選耳機，保留預設勾選的「獨立伴奏監聽／升降 Key 相容模式」，再開始混音。本版改用 AudioWorklet 與約 171 毫秒伴奏緩衝，不改麥克風路徑。修正網站限制使模組載入失敗的問題，保留網站安全設定。部分特殊、跨來源或受保護播放器仍可能不相容；外部瀏覽器／內建直出模式的個人伴奏滑桿會停用。
 
-請解壓縮到新資料夾，保留原有設定與錄音。已完成本機音訊、介面及瀏覽器檢查；原回報的 Discord 端音量仍待實際試唱。尚未正式簽章，SmartScreen 警告仍可能出現。回報時請說明兩組伴奏百分比、是否啟用相容模式、自己及聽眾各聽到的結果，並透過程式內問題回報或 Discord id:quebecliec 聯絡作者。
+既有使用者可在程式內檢查更新；開啟更新檢查者可收到這份正式版。更新檢查仍預設關閉，錄音完成並停止混音後再安裝更新。
 
-## 下載第一代 v1.0.0
-
-- [Windows x64 可攜版（含青綠麥克風圖示）](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.0/KaraokeMixer-Windows-x64-v1.0.0.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.0.0/KaraokeMixer-Windows-x64-v1.0.0.zip.sha256)
-- [版本說明與歷史下載](https://github.com/hobby248/karaoke-mixer/releases)
+歷史版本：[v1.0.1 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.1)、[v1.0.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.0)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
 
 完整解壓縮 ZIP，再執行 `KaraokeMixer.App.exe`。保留 DLL、licenses 及 prerequisites 資料夾。v0.2.0 使用者請解壓縮到新的資料夾使用；舊版沒有內建更新器，不會自動升級。不要刪除個人設定與錄音。
 
@@ -71,7 +67,7 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 
 ## 驗證範圍
 
-完成 Release 建置、25 項核心測試、15 項實際 HTTP 授權協定測試、16 項 WPF 介面檢查、三語與兩種主題六組視窗檢查，以及 12 項瀏覽器互動檢查。含圖示最終包另驗證 EXE／執行中視窗圖示，並重新完成介面與語言／主題檢查。
+v1.0.5 最終混淆包通過核心 32 項、緩衝 9 項、瀏覽器模擬 17 項、實際 WebView2 48 項、WPF 21 項，以及三語與淺深色六組檢查。包含安全限制頁面下的靜音自製媒體混音、跳轉音量、停止還原、模組代次驗證與錯誤代碼。真正 YouTube 測試驗證公開頁面下的 48 kHz 音訊模組載入，未播放或下載使用者歌曲。
 
 實體手機跨裝置連線、防火牆許可、麥克風／VB-CABLE／Discord 實際音質、錄音與長時間影音同步、正式回報送出仍需使用者驗收。不保證所有網站、媒體編碼或電腦都相容。
 

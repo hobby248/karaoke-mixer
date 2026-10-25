@@ -6,11 +6,13 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-## 下載 v1.1.0 正式最新版
+## 下載 v1.1.1 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.1.0/KaraokeMixer-Windows-x64-v1.1.0.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.1.0/KaraokeMixer-Windows-x64-v1.1.0.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.1.1/KaraokeMixer-Windows-x64-v1.1.1.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.1.1/KaraokeMixer-Windows-x64-v1.1.1.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)
+
+v1.1.1 新增人聲與伴奏同時斷音的三語排查指引，位置在主視窗「Discord 設定與使用說明」與隨附 README。本次更新說明及版本號，未更動混音核心、取樣率或緩衝，也不宣稱斷音已修復。
 
 v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字對話、未讀回覆與主動上傳音檔／截圖。改善窄視窗配置、按鈕換行與縮放，保留影片全螢幕。作者回報本版測試正常。
 
@@ -26,11 +28,11 @@ v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字�
 
 **若已更新失敗，請保留原交易備份，手動下載並完整解壓到新資料夾使用，或聯絡作者修復。** 不要刪除設定、錄音或 `%LOCALAPPDATA%\KaraokeMixer\Updates` 內的交易。
 
-完整解壓縮 ZIP，再執行 `KaraokeMixer.App.exe`。保留 DLL、licenses 及 prerequisites 資料夾。v0.2.0 沒有更新器，須手動下載。套件內說明保留本機測試交付時的字樣，正式發布狀態以本頁及版本頁為準。
+完整解壓縮 ZIP，再執行 `KaraokeMixer.App.exe`。保留 DLL、licenses 及 prerequisites 資料夾。v0.2.0 沒有更新器，須手動下載。正式發布狀態以本頁及版本頁為準。
 
 本版尚未正式簽章，Windows SmartScreen 可能顯示「Windows 已保護您的電腦／無法辨識的應用程式」。圖示與混淆無法消除警告。
 
-歷史版本：[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
+歷史版本：[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
 
 ## 功能
 
@@ -59,6 +61,19 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 
 外部瀏覽器模式可能擷取同程序其他分頁的音訊，建議使用專門播放伴奏的瀏覽器，Discord 使用桌面版。
 
+## 人聲與伴奏同時斷音
+
+先展開程式主視窗的「Discord 設定與使用說明」，可依介面語言閱讀繁體中文、简体中文或 English 指引。
+
+若只有 Discord 聽眾聽到斷音，請一次只改一項，使用相同伴奏及說話方式比較；沒改善就還原原設定。
+
+1. 確認 Discord 輸入裝置為 **CABLE Output**。若有「音訊子系統」，將標準（Standard）改為傳統（Legacy），依提示重新啟動 Discord 再測試；找不到此選項可略過。[Discord 官方排查說明](https://support.discord.com/hc/en-us/articles/31623498041623-Discord-Troubleshooting-Guide)
+2. 若仍斷音，另外測試「按鍵發話」，全程按住按鍵，檢查是否與自動輸入靈敏度門檻有關。[Discord 語音輸入模式](https://support.discord.com/hc/en-us/articles/211376518-Voice-Input-Modes-101-Push-to-Talk-Voice-Activated)
+3. 混音且 Discord 已連線時開啟 VB-CABLE 控制面板，觀察 **Push loss／Pull loss** 是否持續增加。先記錄輸入、輸出、Internal SR 與 Max Latency；保留目前取樣率，不直接套用他人的緩衝數值。[VB-CABLE 手冊](https://vb-audio.com/Cable/VBCABLE_ReferenceManual.pdf)
+4. 用雙軌錄音持續說話並播放伴奏約 30 秒，記下聽眾聽到斷音的時間，再透過問題回報主動附上 `-mix.wav`、`-mic.wav` 及控制面板截圖。錄音正常仍不能完全排除程式輸出、VB-CABLE 或 Discord 問題。
+
+這些是排查方法，不保證解決所有斷音。本程式不會自動調整 Discord、VB-CABLE 或 Windows 音訊設定；附件需另外選檔並確認上傳。
+
 ## 手機遙控
 
 電腦與手機連到相同區網；電腦可接有線網路。在電腦「手機遙控」選擇私人網路介面並啟用，再用手機掃 QR Code，或輸入畫面網址與配對碼。配對碼有效兩分鐘且限用一次，可重新產生或撤銷授權。音訊需先在電腦啟動。
@@ -72,6 +87,8 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 程式不會自動開啟麥克風、安裝驅動、重新啟動電腦或修改 Windows／Discord 預設音訊設定。不提供 AI 去人聲、YouTube 下載、純音訊自動產生歌詞、歌單或 MP3 錄音匯出。網站廣告、登入、驗證及內容限制由網站處理。
 
 ## 驗證範圍
+
+v1.1.1 已驗證最終混淆包的排查說明在三語／雙主題共 6 組即時切換，以及各組 800／533 DIP 寬度的換行與捲動；舊版更新器可嚴格驗證 632 個清單檔案。音訊核心的未混淆 DLL 與 v1.1.0 完全相同，未重新執行實際 Discord 試唱。
 
 v1.1.0 本機驗證核心 37 項、更新頻道 14 項、客服用戶端 21 項、客服視窗 13 項，以及最終混淆包的三語／雙主題、窄視窗配置與全螢幕。舊版 v1.0.0 更新器可驗證全部 632 個清單檔案；未在本輪執行真實使用者安裝。
 

@@ -6,15 +6,19 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-## 下載 v1.2.1 正式最新版
+## 下載 v1.2.2 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.2.1/KaraokeMixer-Windows-x64-v1.2.1.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.2.1/KaraokeMixer-Windows-x64-v1.2.1.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.1)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.2.2/KaraokeMixer-Windows-x64-v1.2.2.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.2.2/KaraokeMixer-Windows-x64-v1.2.2.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.2)
+
+v1.2.2 將Windows10啟動封鎖改為相容性提醒。按「繼續使用」、Esc或關閉提醒視窗即可進入程式；更新驗證不再因Win10政策被拒絕。建議Windows11 x64，原有音訊／播放器能力檢查保留；本版不保證所有Win10電腦與功能相容。
+
+**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.2.2，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
 
 v1.2.1 新增麥克風 **0～+20 dB 額外增益**，預設0dB；正增益時啟用人聲專用限幅與提示，伴奏保持獨立。手機遙控同步，設定會保存；增益同時影響人聲監聽及錄音。提高增益也會放大底噪，不能修復已失真的收音。
 
-**新版支援 Windows 11 x64，Windows 10（含22H2／LTSC）會在啟動時提示並結束。** 這是支援政策，不是斷音修復；已安裝的舊版不會因此被回溯停用。
+**v1.2.2已取消先前的Windows10啟動封鎖。** 每次一般啟動只顯示相容性提醒，關閉提醒後繼續使用；這項變更不是斷音修復。
 
 另加入電腦環境預覽、預設關閉且獨立同意的基本分享，以及每次預覽／確認才送出的回報診斷。診斷連結UUID，並非匿名資料；Discord／VB-CABLE觀察由使用者填寫，草稿與重試編號保留，不自動重送。含額外增益的診斷需作者先升級私人後台0.6.1；一般唱歌／錄音不依賴該升級。私人後台不在公開下載包中。
 
@@ -38,7 +42,7 @@ v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字�
 
 本版尚未正式簽章，Windows SmartScreen 可能顯示「Windows 已保護您的電腦／無法辨識的應用程式」。圖示與混淆無法消除警告。
 
-歷史版本：[v1.1.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)、[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
+歷史版本：[v1.2.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.1)、[v1.1.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)、[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
 
 ## 功能
 
@@ -55,7 +59,7 @@ v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字�
 
 ## 第一次使用
 
-本版支援 Windows 11 x64；Windows 10 啟動時會提示不支援並結束。內建伴奏視窗需要網路與 Microsoft WebView2 Runtime；缺少 Runtime 時，程式會提供官方安裝連結。
+建議 Windows 11 x64；Windows 10（含22H2／LTSC）只顯示相容性提醒，可繼續啟動。各功能仍依系統與驅動能力判斷。內建伴奏視窗需要網路與 Microsoft WebView2 Runtime；缺少 Runtime 時，程式會提供官方安裝連結。
 
 1. 解壓縮並啟動程式，閱讀使用條款。若沒有 VB-CABLE，按「安裝音訊驅動」。
 2. 按「啟動 VB-CABLE 官方安裝程式」，同意 Windows 權限提示，在官方視窗按「Install Driver」。完成後儲存工作並自行重新啟動電腦，再回程式「重新偵測」。
@@ -93,6 +97,8 @@ Discord 可先關閉噪音抑制、回音消除與自動增益，再依試聽結
 程式不會自動開啟麥克風、安裝驅動、重新啟動電腦或修改 Windows／Discord 預設音訊設定。不提供 AI 去人聲、YouTube 下載、純音訊自動產生歌詞、歌單或 MP3 錄音匯出。網站廣告、登入、驗證及內容限制由網站處理。
 
 ## 驗證範圍
+
+v1.2.2 本機核心47項、更新頻道14項、最終混淆包主視窗25項、三語雙主題提醒6組，以及5組隔離的實際App啟動／更新驗證流程通過；Win10按鈕／X關閉提醒可進入主視窗，更新驗證不彈窗並成功確認。v1.0.0更新器可解壓ZIP並嚴格驗證632個清單檔案。Win10流程使用版本替身，未在實體Win10驗證音訊相容性。
 
 v1.2.1 本機核心47項、手機HTTP17項、實際WPF／Edge遙控14項、最終混淆包主視窗25項、人聲增益／限幅UI8項通過；三語雙主題及320/390px手機畫面已檢查。舊版更新器嚴格驗證632個清單檔案通過。音訊驗證使用合成樣本，尚未重測實際Discord試唱。以下為先前版本紀錄。
 

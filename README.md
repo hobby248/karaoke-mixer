@@ -6,6 +6,8 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
+**舊版下載已下架。** 未更新服務入口的舊版本已停止提供，請使用下方 **v1.3.1 正式最新版**。仍可啟動的舊版可在程式內檢查更新；無法更新時，請完整下載最新版並解壓到新資料夾，保留個人設定、安裝 UUID、客服草稿及錄音。
+
 ## 下載 v1.3.1 正式最新版
 
 - [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.1/KaraokeMixer-Windows-x64-v1.3.1.zip)
@@ -56,7 +58,7 @@ v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字�
 
 本版尚未正式簽章，Windows SmartScreen 可能顯示「Windows 已保護您的電腦／無法辨識的應用程式」。圖示與混淆無法消除警告。
 
-歷史版本：[v1.3.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.0)、[v1.2.3](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.3)、[v1.2.2](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.2)、[v1.2.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.1)、[v1.1.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)、[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
+歷史版本的發行頁與下載已移除；以下舊版功能說明僅供歷史參考。
 
 ## 功能
 

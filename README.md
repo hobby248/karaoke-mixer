@@ -6,11 +6,15 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-## 下載 v1.3.0 正式最新版
+## 下載 v1.3.1 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.0/KaraokeMixer-Windows-x64-v1.3.0.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.0/KaraokeMixer-Windows-x64-v1.3.0.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.0)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.1/KaraokeMixer-Windows-x64-v1.3.1.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.1/KaraokeMixer-Windows-x64-v1.3.1.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.1)
+
+v1.3.1 更新內附 HTTPS 服務入口，回報、必要服務狀態、隱私告知及跨網路協助共用新入口；一般操作介面維持不顯示服務位址。客服／診斷草稿沿用同一後台原本的本機儲存範圍，保留內容、附件／回覆重試編號及舊版回退相容性。原 UUID、設定、錄音與其他自訂服務隔離保持。
+
+作者完成私人後台入口調整後，已回報 **1.3.1 正常可用**。本次為入口改址與草稿相容處理，未獨立定位先前「產生協助碼時閃退」的根因，也未修改音訊核心。自訂 `usage-service.json` 仍優先，若曾自行放置此檔，需換成作者提供的最新設定。統計政策識別變更後須重新同意，不自動傳送草稿或附件，也沒有 HTTP 降級備援。
 
 v1.3.0 新增**麥克風噪音門**與**跨網路協助調音**。噪音門預設關閉，可設定 -80～-10 dB 收音門檻；僅影響麥克風，支援同區網手機調整。
 
@@ -24,7 +28,7 @@ v1.2.3 更新內附 .NET、Windows Desktop 與 ASP.NET Core 執行階段至 **8.
 
 v1.2.2 將Windows10啟動封鎖改為相容性提醒。按「繼續使用」、Esc或關閉提醒視窗即可進入程式；更新驗證不再因Win10政策被拒絕。建議Windows11 x64，原有音訊／播放器能力檢查保留；本版不保證所有Win10電腦與功能相容。
 
-**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.0，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
+**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.1，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
 
 v1.2.1 新增麥克風 **0～+20 dB 額外增益**，預設0dB；正增益時啟用人聲專用限幅與提示，伴奏保持獨立。手機遙控同步，設定會保存；增益同時影響人聲監聽及錄音。提高增益也會放大底噪，不能修復已失真的收音。
 
@@ -52,7 +56,7 @@ v1.1.0 新增正式／測試更新頻道，以及程式內客服歷史、文字�
 
 本版尚未正式簽章，Windows SmartScreen 可能顯示「Windows 已保護您的電腦／無法辨識的應用程式」。圖示與混淆無法消除警告。
 
-歷史版本：[v1.2.3](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.3)、[v1.2.2](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.2)、[v1.2.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.1)、[v1.1.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)、[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
+歷史版本：[v1.3.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.0)、[v1.2.3](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.3)、[v1.2.2](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.2)、[v1.2.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.2.1)、[v1.1.1](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.1)、[v1.1.0](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.1.0)、[v1.0.6](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.6)、[v1.0.5](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.0.5)、[完整下載紀錄](https://github.com/hobby248/karaoke-mixer/releases)。
 
 ## 功能
 

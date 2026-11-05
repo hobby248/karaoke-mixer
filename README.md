@@ -6,13 +6,32 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-**舊版下載已下架。** 未更新服務入口的舊版本已停止提供，請使用下方 **v1.3.3 正式最新版**。仍可啟動的舊版可在程式內檢查更新；無法更新時，請完整下載最新版並解壓到新資料夾，保留個人設定、安裝 UUID、客服草稿及錄音。
+**舊版下載已下架。** 未更新服務入口的舊版本已停止提供，請使用下方 **v1.3.4 正式最新版**。仍可啟動的舊版可在程式內檢查更新；無法更新時，請完整下載最新版並解壓到新資料夾，保留個人設定、安裝 UUID、客服草稿及錄音。
 
-## 下載 v1.3.3 正式最新版
+## 下載 v1.3.4 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.3/KaraokeMixer-Windows-x64-v1.3.3.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.3/KaraokeMixer-Windows-x64-v1.3.3.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.3)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.4/KaraokeMixer-Windows-x64-v1.3.4.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.4/KaraokeMixer-Windows-x64-v1.3.4.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.4)
+
+### v1.3.4 更新
+
+新增離線調音碼，讓使用者分享調好的混音參數，不需要連線產生遠端協助碼。
+
+1. 在「遙控與設定 → 離線調音碼」按「產生調音碼」，再複製給對方。
+2. 對方貼上代碼，按「預覽調音」，確認數值後停止混音與錄音，再按「確認套用」。
+
+包含人聲與伴奏音量、額外增益、噪音門、回音、Key 和 OFFSET；不含裝置、歌曲、檔案路徑、UUID、驗證資訊，保留對方的靜音與麥克風監聽開關。錯誤或不相容的代碼會被拒絕。雙方均需使用支援調音碼的版本。
+
+已驗證成品的匯出、預覽、套用、錯碼拒絕，以及繁中、簡中、英文介面。本版不更動音訊處理，NAS 不需升級。原有設定、草稿和錄音保留；跨網路即時協助維持原流程。
+
+此為正式頻道版本。雙人合唱與 YouTube 連結合唱仍在 v2.1.0 測試頻道試用。
+
+更新前請完成錄音並停止混音。可在程式內選擇「正式」頻道後檢查更新；手動更新請完整解壓 ZIP，再執行 `KaraokeMixer.App.exe`。
+
+作者：阿Q x Codex。聯絡方式：Discord id:quebecliec。
+
+[另有 v2.1.0 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v2.1.0)，需自行選擇測試頻道。
 
 ### v1.3.3 更新
 
@@ -50,7 +69,7 @@ v1.2.3 更新內附 .NET、Windows Desktop 與 ASP.NET Core 執行階段至 **8.
 
 v1.2.2 將Windows10啟動封鎖改為相容性提醒。按「繼續使用」、Esc或關閉提醒視窗即可進入程式；更新驗證不再因Win10政策被拒絕。建議Windows11 x64，原有音訊／播放器能力檢查保留；本版不保證所有Win10電腦與功能相容。
 
-**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.3，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
+**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.4，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
 
 v1.2.1 新增麥克風 **0～+20 dB 額外增益**，預設0dB；正增益時啟用人聲專用限幅與提示，伴奏保持獨立。手機遙控同步，設定會保存；增益同時影響人聲監聽及錄音。提高增益也會放大底噪，不能修復已失真的收音。
 

@@ -6,13 +6,21 @@ Windows 桌面 K 歌混音工具。將麥克風與 YouTube／瀏覽器伴奏或�
 
 此儲存庫只公開編譯後的程式下載與使用說明，原始碼不公開。
 
-**舊版下載已下架。** 未更新服務入口的舊版本已停止提供，請使用下方 **v1.3.5 正式最新版**。仍可啟動的舊版可在程式內檢查更新；無法更新時，請完整下載最新版並解壓到新資料夾，保留個人設定、安裝 UUID、客服草稿及錄音。
+**舊版下載已下架。** 未更新服務入口的舊版本已停止提供，請使用下方 **v1.3.6 正式最新版**。仍可啟動的舊版可在程式內檢查更新；無法更新時，請完整下載最新版並解壓到新資料夾，保留個人設定、安裝 UUID、客服草稿及錄音。
 
-## 下載 v1.3.5 正式最新版
+## 下載 v1.3.6 正式最新版
 
-- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.5/KaraokeMixer-Windows-x64-v1.3.5.zip)
-- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.5/KaraokeMixer-Windows-x64-v1.3.5.zip.sha256)
-- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.5)
+- [Windows x64 可攜版](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.6/KaraokeMixer-Windows-x64-v1.3.6.zip)
+- [SHA-256 校驗碼](https://github.com/hobby248/karaoke-mixer/releases/download/v1.3.6/KaraokeMixer-Windows-x64-v1.3.6.zip.sha256)
+- [版本說明](https://github.com/hobby248/karaoke-mixer/releases/tag/v1.3.6)
+
+### v1.3.6 更新
+
+- 新增人聲殘響。可在「進階調音」選關閉、KTV 包廂、小舞台或大廳，並調整強度。
+- 伴奏輸出與耳機監聽音量顯示最多一位小數。手動輸入有效數字時即時套用。
+- 按「停止混音」會關閉內建伴奏瀏覽器。
+
+在程式內選擇正式頻道檢查更新，或下載 ZIP 並完整解壓後啟動。
 
 ### v1.3.5 更新
 
@@ -43,7 +51,7 @@ K 歌混音台 v1.3.5 正式版新增選用的自動錯誤回報。延續 v1.3.4
 
 作者：阿Q x Codex。聯絡方式：Discord id:quebecliec。
 
-[另有 v2.1.2 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v2.1.2)，需自行選擇測試頻道。
+[另有 v2.1.6 測試版](https://github.com/hobby248/karaoke-mixer/releases/tag/v2.1.6)，需自行選擇測試頻道。
 
 ### v1.3.3 更新
 
@@ -81,7 +89,7 @@ v1.2.3 更新內附 .NET、Windows Desktop 與 ASP.NET Core 執行階段至 **8.
 
 v1.2.2 將Windows10啟動封鎖改為相容性提醒。按「繼續使用」、Esc或關閉提醒視窗即可進入程式；更新驗證不再因Win10政策被拒絕。建議Windows11 x64，原有音訊／播放器能力檢查保留；本版不保證所有Win10電腦與功能相容。
 
-**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.5，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
+**Win10若已安裝v1.2.1而無法開啟，請手動下載v1.3.6，完整解壓到新資料夾再執行。** 既有設定、UUID、客服草稿及錄音保留，不需刪除AppData。一般可啟動的舊版仍可在程式內檢查更新。
 
 v1.2.1 新增麥克風 **0～+20 dB 額外增益**，預設0dB；正增益時啟用人聲專用限幅與提示，伴奏保持獨立。手機遙控同步，設定會保存；增益同時影響人聲監聽及錄音。提高增益也會放大底噪，不能修復已失真的收音。
 
